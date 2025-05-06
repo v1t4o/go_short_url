@@ -34,7 +34,7 @@ type Repositorio interface {
 	Salvar(url Url) error
 }
 
-func BuscarOuCriarNovaUrl(destino string) (u *string, nova bool, err error) {
+func BuscarOuCriarNovaUrl(destino string) (u *Url, nova bool, err error) {
 	if u = repo.BuscarPorUrl(destino); u != nil {
 		return u, false, nil
 	}
